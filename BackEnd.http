@@ -1,0 +1,50 @@
+###token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiaWF0IjoxNTcyMjcwMDkzfQ.43qB8WO3RNa2qJp3EfLjhQGVtIA3ayRLsnETtdsyeuc
+
+GET https://users-dasw.herokuapp.com/api/tokenDASW
+x-expediente: 709093  
+
+###LogIn Usuario
+POST https://users-dasw.herokuapp.com/api/login
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiaWF0IjoxNTcyMjcwMDkzfQ.43qB8WO3RNa2qJp3EfLjhQGVtIA3ayRLsnETtdsyeuc
+
+{
+ "correo":"t@t.com",
+ "password":"12345"
+}
+
+### REGISTRAR UN USUARIO
+POST https://users-dasw.herokuapp.com/api/users
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiaWF0IjoxNTcyMjcwMDkzfQ.43qB8WO3RNa2qJp3EfLjhQGVtIA3ayRLsnETtdsyeuc
+
+{
+ "nombre":"L",
+ "apellido":"G",
+ "correo":"t@to00000000.com",
+ "url":"",
+ "sexo":"H",
+ "fecha":"10-10-2019",
+ "password":"12345"
+}
+
+### 
+GET https://users-dasw.herokuapp.com/api/users
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiaWF0IjoxNTcyMjcwMDkzfQ.43qB8WO3RNa2qJp3EfLjhQGVtIA3ayRLsnETtdsyeuc
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiY29ycmVvIjoidEB0LmNvbSIsImlpZCI6MCwiaWF0IjoxNTczNDA5NTE0LCJleHAiOjE1NzM0MTMxMTR9.WvUChn9KRvtDlWbfhgZAV0doTQ5z5Y01GHr1lIi4zyA
+
+###
+PUT  https://users-dasw.herokuapp.com/api/users/t@t.com
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiaWF0IjoxNTcyMjcwMDkzfQ.43qB8WO3RNa2qJp3EfLjhQGVtIA3ayRLsnETtdsyeuc
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5MDkzIiwiY29ycmVvIjoidEB0LmNvbSIsImlpZCI6MCwiaWF0IjoxNTczNDE5MjcxLCJleHAiOjE1NzM0MjI4NzF9.PxFkRSUorV-Tkgagxd4NXoHEvdo0TiJjMCic6DVMKeg
+
+{
+    "nombre":"L2",
+    "apellido":"G2",
+    "correo":"t@t.com",
+    "url": "https://randomuser.me/api/portraits/men/10.jpg",
+    "sexo":"H",
+    "fecha":"10-10-2012",
+    "password":"1"
+}

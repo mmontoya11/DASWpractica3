@@ -1,0 +1,11 @@
+#navbar_link{
+    background-color: aliceblue;
+}
+
+#SingUp:invalid{
+    border-color: red;
+}
+
+#SingUp:valid{
+    background-color:blue ;
+}

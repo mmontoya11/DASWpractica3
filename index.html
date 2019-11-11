@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="SuperCode.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" id="navbar_link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#registro">Registrarse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#modelIdLogIn">Log in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consulta.html">Administracion de usuarios</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-3">DASW</h1>
+        <p class="lead">Crea una interface web para registro de usuarios</p>
+        <hr class="my-2">
+        <ul>
+            <li>LogIn</li>
+            <li>Registro</li>
+            <li>Consultas</li>
+
+        </ul>
+
+        <!-- Button trigger modal Log In-->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelIdLogIn">
+            Ir a consultas
+        </button>
+    </div>
+
+
+
+    <!-- Modal Log In  -->
+    <div class="modal fade" id="modelIdLogIn" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LogIn</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body ">
+
+
+
+                    <div class="form-group">
+                        <label for="">Correo</label>
+
+                        <div class="input-group mb3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="email" name="" id="emailLogin" class="form-control" placeholder="Correo Registrado"
+                                aria-describedby="helpId">
+                        </div>
+
+                        <label for="">Password</label>
+
+                        <div class="input-group mb3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="" id="ContraseñaLogin" class="form-control" placeholder="Contraseña"
+                                aria-describedby="helpId">
+                        </div>
+
+
+
+                    </div>
+
+                    <button type="button" class="btn btn-success" id="btnLogIn" data-dismiss="modal">LogIn</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    <hr width="80%">
+                    <p>No tienes cuenta ! <a href="#registro">Registrate aquí.</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal Registro -->
+    <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Registrar usuario</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+              <div class="row">
+                  <div class="col-6">
+                    <input type="text" id="SingUpName" class="form-control" placeholder="Nombre o nombres" aria-describedby="helpId" required>
+                  </div>
+                  <div class="col-6">
+                     <input type="text"  id="SingUpLastName" class="form-control" placeholder="Apellidos" aria-describedby="helpId" required>
+                  </div>
+              
+              </div>
+    
+    
+    
+                   <input type="email"  id="SingUpEmail" class="form-control mt-3" placeholder="Tu correo" aria-describedby="helpId" required>
+     
+                  <input type="password" id="SingUpPassword1" class="form-control mt-3" placeholder="Contraseña" aria-describedby="helpId" required >
+              
+                  <input type="password" id="SingUpPassword2" class="form-control mt-3" placeholder="Confirmar contraseña" aria-describedby="helpId" required >
+    
+                  <input type="date" class="form-control mt-3" value="2000-01-01"  id="SingUpBirthdate" >
+    
+                  <div class="radioB mt-3 border">
+    
+                      <div class="form-check">
+                          <label class="form-check-label ml-3">
+                              <input type="radio" class="form-check-input sexo" name="sexo" id="SingUpFemale" value="F"
+                                  checked>
+                              Mujer
+                          </label>
+                      </div>
+    
+                      <div class="form-check">
+                          <label class="form-check-label ml-3">
+                              <input type="radio" class="form-check-input sexo" name="sexo" id="SingUpMale" value="M">
+                              Hombre
+                          </label>
+                      </div>
+                  </div>
+    
+                  <input type="url" id="SingUpImageUrl" class="form-control mt-3" placeholder="Url de imagen de perfil" aria-describedby="helpId">
+
+                <button type="submit" class="btn btn-success mt-3" id="btnSingUp">Registrarse</button>
+                 <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
+              
+                </form>
+    
+    
+            </div>
+            
+          </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
